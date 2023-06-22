@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
-    private final IProductService productService;
+    private final IProductService ProductService;
     public IndexController(IProductService productService) {
-        this.productService = productService;
+        this.ProductService = productService;
     }
     
     @GetMapping("/")
     public String index(Model model) {
-        var productos = this.productService.getAllProducts();
+        var productos = this.ProductService.getAllProducts();
         model.addAttribute("products", productos);
         return "index";
     }
