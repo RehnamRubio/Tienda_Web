@@ -10,10 +10,6 @@ package com.tienda1.tienda.service;
  */
 
 
-import com.tienda.service.UsuarioDetailsService;
-import com.tienda.dao.UsuarioDao;
-import com.tienda.domain.Usuario;
-import com.tienda.domain.Rol;
 import com.tienda1.dao.UsuarioDao;
 import com.tienda1.domain.Rol;
 import com.tienda1.domain.Usuario;
