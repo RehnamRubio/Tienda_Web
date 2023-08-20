@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html th:attr="lang=${lang}" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6“
+  >
 <head th:fragment="head">
     <title>Tienda de Renan</title>
     <meta charset="utf-8">
@@ -43,6 +45,12 @@
                     
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/admin}">Admin</a>
+                    <li 
+sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')"
+
+sec:authorize="has	Role('ROLE_ADMIN')">
+
+
                     </li>
                 </ul>
             </div>
